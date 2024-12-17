@@ -9,7 +9,7 @@ const NewsLetterSection = () => {
         Your Travel Journey Starts here!
       </h1>
       <p className="mt-3 text-xs text-white sm:text-sm">
-        Sign up and We'll send the best deals to you
+        Sign up and We&apos;ll send the best deals to you
       </p>
       <div className="w-full">
         <input
