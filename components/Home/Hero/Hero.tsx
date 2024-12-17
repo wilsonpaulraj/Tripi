@@ -1,8 +1,17 @@
+"use client";
 import SearchBox from "@/components/Helper/SearchBox";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once - while scrolling down
+    });
+  }, []);
   return (
     <div className="relative h-[120vh] w-full sm:h-[100vh]">
       {/* overlay */}
@@ -18,7 +27,7 @@ const Hero = () => {
       {/* */}
       <div className="absolute left-[50%] top-[50%] z-[100] h-full w-full translate-x-[-50%] translate-y-[-50%]">
         <div className="flex h-full w-full flex-col items-center justify-center">
-          <div>
+          <div data-aos="fade-up">
             <h1 className="lg:text[45px] mb-4 text-center text-[25px] font-bold uppercase tracking-[0.7rem] text-white md:mb-0 md:text-[35px]">
               Lets Enjoy the Nature!
             </h1>
